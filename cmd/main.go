@@ -16,12 +16,12 @@ func main() {
 
 	conn := repository.NewAuth(conf.Mongo.URI).GetClient()
 
-	repository := repository.NewRepository(logger, conn)
+	repositoryApp := repository.NewRepository(logger, conn)
 	//services
-	service := service.NewService(logger, repository)
+	serviceApp := service.NewService(logger, repositoryApp)
 	//handlers
-	handlers := handlers.NewHandler(logger, service)
+	handlersApp := handlers.NewHandler(logger, serviceApp)
 	//server
-	server := server.NewServer(logger, handlers)
+	server := server.NewServer(logger, handlersApp)
 	server.Initialize()
 }

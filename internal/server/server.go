@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"github.com/gorilla/mux"
 	"github.com/sirupsen/logrus"
-	"github.com/web-app/internal/config"
-	"github.com/web-app/internal/handlers"
-	"github.com/web-app/internal/service"
+	"github.com/inkoba/web-app/internal/config"
+	"github.com/inkoba/web-app/internal/handlers"
+	"github.com/inkoba/web-app/internal/service"
 	"net/http"
 	"strconv"
 )
