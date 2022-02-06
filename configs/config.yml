@@ -1,0 +1,7 @@
+files:
+  error_log_file: error_log
+  info_log_file: info_log
+log_mode: dev
+mongo:
+  uri: mongodb://127.0.0.1:27017
+port: "8000"

@@ -1,0 +1,17 @@
+﻿version: "3"
+services:
+   web:
+    build: ./
+    container_name: gowebappcntr
+    restart: always
+    ports:
+      - "8000:8000"
+   mongodb:
+    image: mongo:latest
+    container_name: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo-sample:/docker-entrypoint-initdb.d
+      - ./mongodata:/data/db
